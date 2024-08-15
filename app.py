@@ -50,7 +50,7 @@ if 'chat_history' not in st.session_state:
     st.session_state['chat_history'] = []
 
 input = st.text_input("Input: ", key="input")
-submit = st.button("Ask the me :)")
+submit = st.button("Ask me :)")
 
 if submit and input:
     # Show a spinner while waiting for the response
