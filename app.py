@@ -4,11 +4,7 @@ from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 from streamlit_chat import message
-st.set_page_config(
-    page_title="SkyChat",
-    page_icon=":brain:",  # Favicon emoji
-    layout="centered",  # Page layout option
-)
+
 # Load environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
