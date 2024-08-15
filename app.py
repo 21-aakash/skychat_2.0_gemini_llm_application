@@ -61,7 +61,8 @@ if submit and input:
         st.session_state['chat_history'].append(("You", input))
         for chunk in response:
             st.session_state['chat_history'].append(("Bot", chunk.text))
-        st.success("Response generated successfully!", icon="✅")
+        
+        st.toast('Response generated successfully!', icon='✅')
 
 # Display the chat history using the streamlit_chat message function
 for role, text in reversed(st.session_state['chat_history']):
