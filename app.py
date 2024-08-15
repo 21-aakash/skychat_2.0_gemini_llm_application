@@ -9,6 +9,12 @@ from streamlit_chat import message
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+st.set_page_config(
+    page_title="SkyChat",
+    page_icon=":brain:",  # Favicon emoji
+    layout="centered",  # Page layout option
+)
+
 # Function to load Gemini Pro model and get responses
 model = genai.GenerativeModel("gemini-pro")
 chat = model.start_chat(history=[])
